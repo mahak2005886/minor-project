@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Agricultural Farmer Dashboard Design System */
+
+@layer base {
+  :root {
+    /* Agricultural Theme - Green Primary Colors */
+    --background: 0 0% 98%;
+    --foreground: 140 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 15% 15%;
+
+    /* Primary - Deep Agricultural Green */
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 142 76% 32%;
+
+    /* Secondary - Light Green */
+    --secondary: 142 30% 94%;
+    --secondary-foreground: 142 76% 20%;
+
+    /* Success Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    /* Agricultural Accent Colors */
+    --accent: 45 93% 47%;
+    --accent-foreground: 140 15% 15%;
+
+    --muted: 142 20% 96%;
+    --muted-foreground: 140 15% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 142 30% 90%;
+    --input: 142 30% 94%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.75rem;
+
+    /* Custom Agricultural Variables */
+    --sidebar-width: 280px;
+    --sidebar-collapsed: 80px;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(142 70% 42%));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(120 70% 40%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(142 20% 98%));
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 15px -3px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 4px 25px -5px hsl(var(--primary) / 0.15);
+    --shadow-elevated: 0 10px 40px -10px hsl(var(--primary) / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 140 20% 8%;
+    --foreground: 142 30% 92%;
+
+    --card: 140 25% 10%;
+    --card-foreground: 142 30% 92%;
+
+    --popover: 140 25% 10%;
+    --popover-foreground: 142 30% 92%;
+
+    --primary: 142 70% 50%;
+    --primary-foreground: 140 20% 8%;
+    --primary-hover: 142 70% 55%;
+
+    --secondary: 140 25% 15%;
+    --secondary-foreground: 142 30% 85%;
+
+    --success: 142 70% 50%;
+    --success-foreground: 140 20% 8%;
+
+    --accent: 45 90% 55%;
+    --accent-foreground: 140 20% 8%;
+
+    --muted: 140 25% 15%;
+    --muted-foreground: 142 15% 65%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 142 30% 92%;
+
+    --border: 140 25% 18%;
+    --input: 140 25% 15%;
+    --ring: 142 70% 50%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(120 65% 45%));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(100 65% 45%));
+    --gradient-card: linear-gradient(145deg, hsl(140 25% 12%), hsl(140 20% 8%));
+    
+    --shadow-soft: 0 2px 15px -3px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 4px 25px -5px hsl(0 0% 0% / 0.4);
+    --shadow-elevated: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
